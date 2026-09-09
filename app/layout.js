@@ -48,10 +48,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <main className="flex gap-5">
-        <TavixProvider>
-          <Sidebar />
-          {children}
-        </TavixProvider>
+          <TavixProvider>
+            <Sidebar />
+            {children}
+          </TavixProvider>
         </main>
       </body>
     </html>

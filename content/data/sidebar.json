@@ -5,127 +5,26 @@
   },
   "menu": [
     {
-      "id": "dashboard",
-      "title": "Dashboard",
-      "icon": "grid-3x3",
-      "type": "link",
-      "url": "/dashboard",
-      "children": [
-        {
-          "id": "overview",
-          "title": "Overview",
-          "icon": "house",
-          "type": "link",
-          "url": "/dashboard/overview"
-        },
-        {
-          "id": "activity",
-          "title": "Recent Activity",
-          "icon": "clock",
-          "type": "link",
-          "url": "/dashboard/activity"
-        }
-      ]
-    },
-    {
-      "id": "products",
-      "title": "Products",
+      "id": "installation",
+      "title": "Installation",
       "icon": "folder",
       "type": "link",
       "children": [
         {
-          "id": "all-products",
-          "title": "All Products",
-          "icon": "file-text",
+          "id": "react-installation",
+          "title": "React",
+          "icon": "file",
           "type": "link",
-          "url": "/products"
+          "url": "/installation/react"
         },
         {
-          "id": "inventory",
-          "title": "Inventory",
-          "icon": "bookmark",
+          "id": "nextjs-installation",
+          "title": "Next.js",
+          "icon": "file",
           "type": "link",
-          "url": "/products/inventory"
-        },
-        {
-          "id": "categories",
-          "title": "Categories",
-          "icon": "tag",
-          "type": "link",
-          "url": "/products/categories"
+          "url": "/installation/nextjs"
         }
       ]
-    },
-    {
-      "id": "customers",
-      "title": "Customers",
-      "icon": "user",
-      "type": "link",
-      "url": "/customers",
-      "children": [
-        {
-          "id": "all-customers",
-          "title": "All Customers",
-          "icon": "user",
-          "type": "link",
-          "url": "/customers"
-        },
-        {
-          "id": "customer-groups",
-          "title": "Customer Groups",
-          "icon": "user-shield",
-          "type": "link",
-          "url": "/customers/groups"
-        }
-      ]
-    },
-    {
-      "id": "orders",
-      "title": "Orders",
-      "icon": "file-text",
-      "type": "link",
-      "url": "/orders",
-      "children": [
-        {
-          "id": "all-orders",
-          "title": "All Orders",
-          "icon": "file-text",
-          "type": "link",
-          "url": "/orders"
-        },
-        {
-          "id": "returns",
-          "title": "Returns",
-          "icon": "rotate-ccw",
-          "type": "link",
-          "url": "/orders/returns"
-        }
-      ]
-    },
-    {
-      "id": "analytics",
-      "title": "Analytics",
-      "icon": "sliders-horizontal",
-      "type": "link",
-      "url": "/analytics",
-      "children": []
-    },
-    {
-      "id": "media",
-      "title": "Media Library",
-      "icon": "image",
-      "type": "link",
-      "url": "/media",
-      "children": []
-    }
-  ],
-  "footer": [
-    {
-      "id": "settings",
-      "title": "Settings",
-      "icon": "settings",
-      "type": "link",
-      "url": "/settings"
     }
   ]
 }
