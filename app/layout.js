@@ -47,10 +47,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main className="flex gap-5">
+        <main className="flex bg-surface h-screen overflow-hidden">
           <TavixProvider>
             <Sidebar />
-            {children}
+            <div className="flex-1 overflow-y-auto">{children}</div>
           </TavixProvider>
         </main>
       </body>
