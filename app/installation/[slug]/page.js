@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { Markdown } from "tavix";
+import { readDoc } from "@/utils/read-doc";
 
 const installationPages = {
   react: {
@@ -33,12 +32,11 @@ export default async function InstallationPage({ params }) {
     notFound();
   }
 
-  const content = await readFile(
-    path.join(process.cwd(), "content/docs", page.file),
-    "utf8",
-  );
+  const content = await readDoc(page.file);
 
-  return <article className="docs-content">
-   <Markdown content={content} />
-  </article>;
+  return (
+    <article className="docs-content">
+      <Markdown content={content} />
+    </article>
+  );
 }

@@ -1,6 +1,10 @@
 # Next.js Installation Guide
 
+Add Tavix to a Next.js application with the steps below.
+
 ## Create Next.js project
+
+Create a new Next.js project if you do not already have one.
 
 ```bash
 npx create-next-app@latest
@@ -8,28 +12,36 @@ npx create-next-app@latest
 
 ## Install Tavix
 
+Install Tavix from npm.
+
 ```bash
 npm i tavix
 ```
 
-## Import CSS and Providers
+## Configure Tavix
 
-Add Tavix CSS and providers in your app entry file.
+Import Tavix's CSS and wrap your application with `TavixProvider` in `app/layout.jsx`.
 
 ```js
 import "tavix/css";
-// import "./globals.css";
-import { TavixProvider } from "tavix/providers";
+import "./globals.css";
+import { TavixProvider } from "tavix/provider";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <TavixProviders>{children}</TavixProviders>
+        <TavixProvider>{children}</TavixProvider>
       </body>
     </html>
   );
 }
 ```
 
-If your project structure requires it, place the CSS import in your global stylesheet or app entry file and wrap your app with the providers component.
+## Start the app
+
+Run the development server to view your application.
+
+```bash
+npm run dev
+```

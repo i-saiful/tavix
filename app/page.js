@@ -1,7 +1,12 @@
-export default function Home() {
+import { Markdown } from "tavix";
+import { readDoc } from "@/utils/read-doc";
+
+export default async function Home() {
+  const content = await readDoc("css-overrides.md");
+
   return (
-    <div>
-      <h1>Welcome to Tavix</h1>
-    </div>
+    <article className="docs-content">
+      <Markdown content={content} />
+    </article>
   );
 }
