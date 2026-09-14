@@ -217,7 +217,7 @@ Add each color family to `:root` as needed. Keeping each family separate makes t
 
 Use semantic variables instead of raw palette colors. Keep the token names the same in both themes.
 
-### `light.css`
+### light.css
 
 ```css
 :root {
@@ -227,7 +227,7 @@ Use semantic variables instead of raw palette colors. Keep the token names the s
 }
 ```
 
-### `dark.css`
+### dark.css
 
 ```css
 [data-theme="dark"] {
@@ -237,7 +237,7 @@ Use semantic variables instead of raw palette colors. Keep the token names the s
 }
 ```
 
-### `utils.css`
+### utils.css
 
 ```css
 .text-body {

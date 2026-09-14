@@ -15,16 +15,34 @@
           "title": "React",
           "icon": "file",
           "type": "link",
-          "url": "/installation/react"
+          "url": "/installation/react",
+          "file": "react-installation.md"
         },
         {
           "id": "nextjs-installation",
           "title": "Next.js",
           "icon": "file",
           "type": "link",
-          "url": "/installation/nextjs"
+          "url": "/installation/nextjs",
+          "file": "nextjs-installation.md"
         }
       ]
+    },
+    {
+      "id": "button",
+      "title": "Button",
+      "icon": "file",
+      "type": "link",
+      "url": "/form/button",
+      "file": "button.md"
+    },
+    {
+      "id": "input",
+      "title": "Input",
+      "icon": "file",
+      "type": "link",
+      "url": "/form/input",
+      "file": "input.md"
     }
   ]
 }
