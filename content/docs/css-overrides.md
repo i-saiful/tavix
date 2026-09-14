@@ -203,6 +203,40 @@ Add each color family to `:root` as needed. Keeping each family separate makes t
 }
 ```
 
+## Semantic color system
+
+Use semantic variables instead of raw palette colors. Keep the token names the same in both themes.
+
+### `light.css`
+
+```css
+:root {
+  --color-text-body: var(--color-neutral-700);
+  --color-background-surface: var(--color-neutral-0);
+  --color-action-primary: var(--color-brand-600);
+}
+```
+
+### `dark.css`
+
+```css
+[data-theme="dark"] {
+  --color-text-body: var(--color-neutral-300);
+  --color-background-surface: var(--color-neutral-900);
+  --color-action-primary: var(--color-brand-500);
+}
+```
+
+### `utils.css`
+
+```css
+.text-body {
+  color: var(--color-text-body);
+}
+```
+
+When adding a color, create one purpose-based semantic variable in both theme files, then use it in your component or utility class.
+
 ## Customization tips
 
 - Import only the fonts your project uses.
