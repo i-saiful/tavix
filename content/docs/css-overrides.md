@@ -1,6 +1,34 @@
-# CSS Overrides
+# Install Tavix
 
-Use these CSS variables to customize the global font and color palette for your app. Start with the font setup, then add the color systems your project needs.
+Install Tavix before using its components and CSS variables.
+
+```bash
+npm i tavix
+```
+
+Customize Tavix's global styles with your own fonts, color tokens, and semantic theme values. Load Tavix's base CSS, then add your overrides to the application's global stylesheet.
+
+## CSS overrides
+
+Import `tavix/css` before your application CSS. This loads Tavix's base styles and lets your global variables override them.
+
+### React/Vite
+
+Import both stylesheets in `main.jsx`:
+
+```jsx
+import "tavix/css";
+import "./index.css";
+```
+
+### Next.js
+
+Import both stylesheets in `app/layout.js`:
+
+```jsx
+import "tavix/css";
+import "./globals.css";
+```
 
 ## Import fonts
 
@@ -67,27 +95,9 @@ Define a variable for each imported font inside `:root`. Set `--ff-base` to the 
 }
 ```
 
-## Add variables to your global stylesheet
+## Add override variables
 
-Place the font variables and color variables in your app's global stylesheet. Tavix uses these variables globally, so no component-level setup is required.
-
-### React/Vite
-
-Add the variables to `src/index.css` or another stylesheet imported by `main.jsx`. Import `tavix/css` before your application CSS.
-
-```jsx
-import "tavix/css";
-import "./index.css";
-```
-
-### Next.js
-
-Add the variables to `app/globals.css`, which is imported by `app/layout.js`. Import `tavix/css` before your application CSS.
-
-```jsx
-import "tavix/css";
-import "./globals.css";
-```
+Place the font variables and color variables in your application stylesheet, such as `src/index.css` or `app/globals.css`.
 
 ## Color system
 
