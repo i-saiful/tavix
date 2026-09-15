@@ -3,10 +3,12 @@ import { Markdown } from "tavix";
 import sidebar from "@/content/data/sidebar.json";
 import { readDoc } from "@/utils/read-doc";
 
-const pages = sidebar.menu.flatMap((item) => item.children ?? [item]).map((page) => ({
-  ...page,
-  section: page.url.split("/")[1],
-}));
+const pages = sidebar.menu
+  .flatMap((item) => item.children ?? [])
+  .map((page) => ({
+    ...page,
+    section: page.url.split("/")[1],
+  }));
 
 function getPage(section, slug) {
   return pages.find(

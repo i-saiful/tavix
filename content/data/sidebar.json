@@ -33,7 +33,7 @@
       "title": "Button",
       "icon": "file",
       "type": "link",
-      "url": "/form/button",
+      "url": "/button",
       "file": "button.md"
     },
     {
@@ -41,8 +41,96 @@
       "title": "Input",
       "icon": "file",
       "type": "link",
-      "url": "/form/input",
+      "url": "/input",
       "file": "input.md"
+    },
+    {
+      "id": "autocomplete",
+      "title": "Autocomplete",
+      "icon": "file",
+      "type": "link",
+      "url": "/autocomplete",
+      "file": "autocomplete.md"
+    },
+    {
+      "id": "calendar",
+      "title": "Calendar",
+      "icon": "file",
+      "type": "link",
+      "url": "/calendar",
+      "file": "calendar.md"
+    },
+    {
+      "id": "checkbox",
+      "title": "Checkbox",
+      "icon": "file",
+      "type": "link",
+      "url": "/checkbox",
+      "file": "checkbox.md"
+    },
+    {
+      "id": "date-picker",
+      "title": "DatePicker",
+      "icon": "file",
+      "type": "link",
+      "url": "/date-picker",
+      "file": "date-picker.md"
+    },
+    {
+      "id": "file-upload",
+      "title": "FileUpload",
+      "icon": "file",
+      "type": "link",
+      "url": "/file-upload",
+      "file": "file-upload.md"
+    },
+    {
+      "id": "otp-input",
+      "title": "OTP Input",
+      "icon": "file",
+      "type": "link",
+      "url": "/otp-input",
+      "file": "otp-input.md"
+    },
+    {
+      "id": "radio",
+      "title": "Radio",
+      "icon": "file",
+      "type": "link",
+      "url": "/radio",
+      "file": "radio.md"
+    },
+    {
+      "id": "select",
+      "title": "Select",
+      "icon": "file",
+      "type": "link",
+      "url": "/select",
+      "file": "select.md"
+    },
+    {
+      "id": "slider",
+      "title": "Slider",
+      "icon": "file",
+      "type": "link",
+      "url": "/slider",
+      "file": "slider.md"
+    },
+    {
+      "id": "textarea",
+      "title": "Textarea",
+      "icon": "file",
+      "type": "link",
+      "url": "/textarea",
+      "file": "textarea.md"
+    },
+    {
+      "id": "time-picker",
+      "title": "TimePicker",
+      "icon": "file",
+      "type": "link",
+      "url": "/time-picker",
+      "file": "time-picker.md"
     }
   ]
 }
