@@ -61,6 +61,78 @@
       "file": "accordion.md"
     },
     {
+      "id": "alert",
+      "title": "Alert",
+      "icon": "file",
+      "type": "link",
+      "url": "/alert",
+      "file": "alert.md"
+    },
+    {
+      "id": "badge",
+      "title": "Badge",
+      "icon": "file",
+      "type": "link",
+      "url": "/badge",
+      "file": "badge.md"
+    },
+    {
+      "id": "card",
+      "title": "Card",
+      "icon": "file",
+      "type": "link",
+      "url": "/card",
+      "file": "card.md"
+    },
+    {
+      "id": "grid",
+      "title": "Grid",
+      "icon": "file",
+      "type": "link",
+      "url": "/grid",
+      "file": "grid.md"
+    },
+    {
+      "id": "main",
+      "title": "Main",
+      "icon": "file",
+      "type": "link",
+      "url": "/main",
+      "file": "main.md"
+    },
+    {
+      "id": "progress",
+      "title": "Progress",
+      "icon": "file",
+      "type": "link",
+      "url": "/progress",
+      "file": "progress.md"
+    },
+    {
+      "id": "skeleton",
+      "title": "Skeleton",
+      "icon": "file",
+      "type": "link",
+      "url": "/skeleton",
+      "file": "skeleton.md"
+    },
+    {
+      "id": "spinner",
+      "title": "Spinner",
+      "icon": "file",
+      "type": "link",
+      "url": "/spinner",
+      "file": "spinner.md"
+    },
+    {
+      "id": "tooltip",
+      "title": "Tooltip",
+      "icon": "file",
+      "type": "link",
+      "url": "/tooltip",
+      "file": "tooltip.md"
+    },
+    {
       "id": "avatar",
       "title": "Avatar",
       "icon": "file",
@@ -203,6 +275,22 @@
       "type": "link",
       "url": "/time-picker",
       "file": "time-picker.md"
+    },
+    {
+      "id": "hooks",
+      "title": "Hooks",
+      "icon": "folder",
+      "type": "link",
+      "children": [
+        {
+          "id": "toast",
+          "title": "Toast",
+          "icon": "file",
+          "type": "link",
+          "url": "/hook/toast",
+          "file": "toast.md"
+        }
+      ]
     }
   ]
 }
