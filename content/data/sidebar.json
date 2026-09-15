@@ -53,6 +53,78 @@
       "file": "autocomplete.md"
     },
     {
+      "id": "accordion",
+      "title": "Accordion",
+      "icon": "file",
+      "type": "link",
+      "url": "/accordion",
+      "file": "accordion.md"
+    },
+    {
+      "id": "avatar",
+      "title": "Avatar",
+      "icon": "file",
+      "type": "link",
+      "url": "/avatar",
+      "file": "avatar.md"
+    },
+    {
+      "id": "carousel",
+      "title": "Carousel",
+      "icon": "file",
+      "type": "link",
+      "url": "/carousel",
+      "file": "carousel.md"
+    },
+    {
+      "id": "copy-button",
+      "title": "Copy Button",
+      "icon": "file",
+      "type": "link",
+      "url": "/copy-button",
+      "file": "copy-button.md"
+    },
+    {
+      "id": "selectable-table",
+      "title": "Selectable Table",
+      "icon": "file",
+      "type": "link",
+      "url": "/selectable-table",
+      "file": "selectable-table.md"
+    },
+    {
+      "id": "table",
+      "title": "Table",
+      "icon": "file",
+      "type": "link",
+      "url": "/table",
+      "file": "table.md"
+    },
+    {
+      "id": "timeline",
+      "title": "Timeline",
+      "icon": "file",
+      "type": "link",
+      "url": "/timeline",
+      "file": "timeline.md"
+    },
+    {
+      "id": "tree-view",
+      "title": "TreeView",
+      "icon": "file",
+      "type": "link",
+      "url": "/tree-view",
+      "file": "tree-view.md"
+    },
+    {
+      "id": "stat",
+      "title": "Stat",
+      "icon": "file",
+      "type": "link",
+      "url": "/stat",
+      "file": "stat.md"
+    },
+    {
       "id": "calendar",
       "title": "Calendar",
       "icon": "file",
