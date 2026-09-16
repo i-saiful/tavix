@@ -69,12 +69,124 @@
       "file": "alert.md"
     },
     {
+      "id": "alert-dialog",
+      "title": "Alert Dialog",
+      "icon": "file",
+      "type": "link",
+      "url": "/alert-dialog",
+      "file": "alert-dialog.md"
+    },
+    {
       "id": "badge",
       "title": "Badge",
       "icon": "file",
       "type": "link",
       "url": "/badge",
       "file": "badge.md"
+    },
+    {
+      "id": "breadcrumb",
+      "title": "Breadcrumb",
+      "icon": "file",
+      "type": "link",
+      "url": "/breadcrumb",
+      "file": "breadcrumb.md"
+    },
+    {
+      "id": "code-block",
+      "title": "CodeBlock",
+      "icon": "file",
+      "type": "link",
+      "url": "/code-block",
+      "file": "code-block.md"
+    },
+    {
+      "id": "command-palette",
+      "title": "Command Palette",
+      "icon": "file",
+      "type": "link",
+      "url": "/command-palette",
+      "file": "command-palette.md"
+    },
+    {
+      "id": "confirmation-dialog",
+      "title": "Confirmation Dialog",
+      "icon": "file",
+      "type": "link",
+      "url": "/confirmation-dialog",
+      "file": "confirmation-dialog.md"
+    },
+    {
+      "id": "context-menu",
+      "title": "Context Menu",
+      "icon": "file",
+      "type": "link",
+      "url": "/context-menu",
+      "file": "context-menu.md"
+    },
+    {
+      "id": "dialog",
+      "title": "Dialog",
+      "icon": "file",
+      "type": "link",
+      "url": "/dialog",
+      "file": "dialog.md"
+    },
+    {
+      "id": "modal",
+      "title": "Modal",
+      "icon": "file",
+      "type": "link",
+      "url": "/modal",
+      "file": "modal.md"
+    },
+    {
+      "id": "drawer",
+      "title": "Drawer",
+      "icon": "file",
+      "type": "link",
+      "url": "/drawer",
+      "file": "drawer.md"
+    },
+    {
+      "id": "dropdown",
+      "title": "Dropdown",
+      "icon": "file",
+      "type": "link",
+      "url": "/dropdown",
+      "file": "dropdown.md"
+    },
+    {
+      "id": "file-preview",
+      "title": "File Preview",
+      "icon": "file",
+      "type": "link",
+      "url": "/file-preview",
+      "file": "file-preview.md"
+    },
+    {
+      "id": "image-gallery",
+      "title": "Image Gallery",
+      "icon": "file",
+      "type": "link",
+      "url": "/image-gallery",
+      "file": "image-gallery.md"
+    },
+    {
+      "id": "image-preview",
+      "title": "Image Preview",
+      "icon": "file",
+      "type": "link",
+      "url": "/image-preview",
+      "file": "image-preview.md"
+    },
+    {
+      "id": "markdown",
+      "title": "Markdown",
+      "icon": "file",
+      "type": "link",
+      "url": "/markdown",
+      "file": "markdown.md"
     },
     {
       "id": "card",
@@ -101,12 +213,44 @@
       "file": "main.md"
     },
     {
+      "id": "navbar",
+      "title": "Navbar",
+      "icon": "file",
+      "type": "link",
+      "url": "/navbar",
+      "file": "navbar.md"
+    },
+    {
+      "id": "pagination",
+      "title": "Pagination",
+      "icon": "file",
+      "type": "link",
+      "url": "/pagination",
+      "file": "pagination.md"
+    },
+    {
+      "id": "popover",
+      "title": "Popover",
+      "icon": "file",
+      "type": "link",
+      "url": "/popover",
+      "file": "popover.md"
+    },
+    {
       "id": "progress",
       "title": "Progress",
       "icon": "file",
       "type": "link",
       "url": "/progress",
       "file": "progress.md"
+    },
+    {
+      "id": "sidebar",
+      "title": "Sidebar",
+      "icon": "file",
+      "type": "link",
+      "url": "/sidebar",
+      "file": "sidebar.md"
     },
     {
       "id": "skeleton",
@@ -123,6 +267,38 @@
       "type": "link",
       "url": "/spinner",
       "file": "spinner.md"
+    },
+    {
+      "id": "stepper",
+      "title": "Stepper",
+      "icon": "file",
+      "type": "link",
+      "url": "/stepper",
+      "file": "stepper.md"
+    },
+    {
+      "id": "tabs",
+      "title": "Tabs",
+      "icon": "file",
+      "type": "link",
+      "url": "/tabs",
+      "file": "tabs.md"
+    },
+    {
+      "id": "video-player",
+      "title": "Video Player",
+      "icon": "file",
+      "type": "link",
+      "url": "/video-player",
+      "file": "video-player.md"
+    },
+    {
+      "id": "video",
+      "title": "Video",
+      "icon": "file",
+      "type": "link",
+      "url": "/video",
+      "file": "video.md"
     },
     {
       "id": "tooltip",
@@ -214,7 +390,7 @@
     },
     {
       "id": "date-picker",
-      "title": "DatePicker",
+      "title": "Date Picker",
       "icon": "file",
       "type": "link",
       "url": "/date-picker",
@@ -222,7 +398,7 @@
     },
     {
       "id": "file-upload",
-      "title": "FileUpload",
+      "title": "File Upload",
       "icon": "file",
       "type": "link",
       "url": "/file-upload",
@@ -270,7 +446,7 @@
     },
     {
       "id": "time-picker",
-      "title": "TimePicker",
+      "title": "Time Picker",
       "icon": "file",
       "type": "link",
       "url": "/time-picker",

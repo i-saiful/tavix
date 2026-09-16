@@ -1,10 +1,10 @@
 # Toast
 
-A temporary notification intended for use through `ToastProvider` and `useToast`.
+A temporary notification intended for use through `useToast`.
 
 ## `useToast` Hook
 
-Use `useToast` inside a component rendered within `ToastProvider`:
+Use `useToast` inside a component rendered within `TavixProvider`:
 
 ```jsx
 import { useToast } from "tavix/hooks";
@@ -44,12 +44,12 @@ export default function SaveButton() {
 }
 ```
 
-The component must be rendered inside `ToastProvider` for `useToast` to work:
+The component must be rendered inside `TavixProvider` for `useToast` to work:
 
 ```jsx
-<ToastProvider>
+<TavixProvider>
 	<SaveButton />
-</ToastProvider>
+</TavixProvider>
 ```
 
 The hook returns:
