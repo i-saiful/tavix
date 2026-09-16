@@ -459,12 +459,20 @@
       "type": "link",
       "children": [
         {
-          "id": "toast",
-          "title": "Toast",
+          "id": "usetoast",
+          "title": "useToast",
           "icon": "file",
           "type": "link",
-          "url": "/hook/toast",
-          "file": "toast.md"
+          "url": "/hook/usetoast",
+          "file": "usetoast.md"
+        },
+        {
+          "id": "usemount",
+          "title": "useMount",
+          "icon": "file",
+          "type": "link",
+          "url": "/hook/usemount",
+          "file": "usemount.md"
         }
       ]
     }
