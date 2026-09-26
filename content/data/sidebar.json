@@ -37,6 +37,14 @@
       "file": "button.md"
     },
     {
+      "id": "css-utils",
+      "title": "CSS Utils",
+      "icon": "file",
+      "type": "link",
+      "url": "/css-utils",
+      "file": "css-utils.md"
+    },
+    {
       "id": "input",
       "title": "Input",
       "icon": "file",
