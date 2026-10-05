@@ -51,6 +51,22 @@ import { Sidebar } from "tavix";
 
 ## Examples
 
+### Quick sidebar layout
+
+Wrap the sidebar and page content in `TavixProvider` to share sidebar state:
+
+```jsx
+import { Sidebar } from "tavix";
+import { TavixProvider } from "tavix/provider";
+
+<main className="flex bg-surface h-screen overflow-hidden">
+  <TavixProvider>
+    <Sidebar />
+    <div className="flex-1 overflow-y-auto">{children}</div>
+  </TavixProvider>
+</main>
+```
+
 ### Basic sidebar
 
 ```jsx

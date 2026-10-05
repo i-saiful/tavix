@@ -1,6 +1,6 @@
 # Layout and utility classes
 
-This is a reference for the classes defined in [layout.css](../src/css/layout.css), [utilities.css](../src/css/utilities.css), and [typography.css](../src/css/tokens/typography.css). Import Tavix CSS (`tavix/css`) to use them. Class names below are written without the leading `.` used in CSS selectors.
+Reference for Tavix layout components and utility classes. Import `tavix/css` to enable styling. Class names below omit the leading `.` used in CSS selectors.
 
 ## Breakpoints
 
@@ -12,7 +12,7 @@ Responsive classes use a prefix in HTML/JSX and apply at the specified width **a
 | `md:` | 768px |
 | `lg:` | 1024px |
 
-Only the classes listed as responsive below have prefixed versions. There is no general-purpose responsive prefix for every class. For example, `md:flex` and `md:m-auto` exist, but `md:mt-4` does not. The `.container` also changes padding at 1280px, without an `xl:` utility prefix.
+Only the classes listed as responsive below have prefixed versions. There is no general-purpose responsive prefix for every class. For example, `md:flex` and `md:mt-4` exist, but `md:pt-4` does not. The `.container` and `.section` also change padding at 1280px, without an `xl:` utility prefix.
 
 ```jsx
 <div className="flex flex-col md:flex-row gap-4 md:gap-8">
@@ -20,7 +20,7 @@ Only the classes listed as responsive below have prefixed versions. There is no 
 </div>
 ```
 
-## Layout (`layout.css`)
+## Layout
 
 | Purpose | Classes | Effect |
 | --- | --- | --- |
@@ -47,8 +47,37 @@ Only the classes listed as responsive below have prefixed versions. There is no 
 | `h-auto`, `h-full`, `h-screen`, `h-fit`, `h-max`, `h-min` | Height: auto, 100%, 100vh, fit-content, max-content, min-content. |
 | `h-8`, `h-16`, `h-48`, `h-64`, `h-80`, `h-96` | Height: 2rem, 4rem, 12rem, 16rem, 20rem, 24rem. |
 | `w-<fraction>`, `h-<fraction>` | Percent width/height; available fractions: `1/2`, `1/3`, `2/3`, `1/4`, `2/4`, `3/4`, `1/5`, `2/5`, `3/5`, `4/5`. These are literal classes such as `w-1/2`. |
-| `min-w-0`, `min-w-full`, `max-w-full` | Min/max width: 0, 100%, 100%. |
-| `min-h-0`, `min-h-full`, `min-h-screen`, `max-h-full` | Min/max height: 0, 100%, 100vh, 100%. |
+| `min-w-0`, `min-w-full` | Minimum width: 0, 100%. |
+| `min-h-0`, `min-h-full`, `min-h-screen` | Minimum height: 0, 100%, 100vh. |
+
+### Maximum width and height
+
+Max-size classes limit an element's size without forcing it to fill that size. Every class in this table supports `sm:`, `md:`, and `lg:` prefixes.
+
+| Classes | Effect |
+| --- | --- |
+| `max-w-none`, `max-h-none` | Removes the maximum width/height limit. |
+| `max-w-full`, `max-h-full` | Maximum width/height: 100%. |
+| `max-w-screen`, `max-h-screen` | Maximum width: 100vw; maximum height: 100vh. |
+| `max-w-fit`, `max-h-fit` | Maximum width/height: fit-content. |
+| `max-w-max`, `max-h-max` | Maximum width/height: max-content. |
+| `max-w-min`, `max-h-min` | Maximum width/height: min-content. |
+| `max-w-<fraction>`, `max-h-<fraction>` | Percent maximum width/height; available fractions: `1/2`, `1/3`, `2/3`, `1/4`, `2/4`, `3/4`, `1/5`, `2/5`, `3/5`, `4/5`. |
+
+Fractions represent their percentage equivalents: `1/2` is 50%, `1/3` is 33.333333%, `2/3` is 66.666667%, quarters are 25%/50%/75%, and fifths are 20%/40%/60%/80%. Percentage height limits require a containing block with a definite height.
+
+There are no fixed numeric max-size classes such as `max-w-30`, `max-w-64`, `max-h-8`, `max-h-16`, `max-h-48`, `max-h-64`, `max-h-80`, or `max-h-96`, including responsive variants. The regular fixed-size `w-*` and `h-*` classes listed above remain available.
+
+```jsx
+<div className="w-full max-w-full sm:max-w-3/4 md:max-w-1/2 lg:max-w-1/3">
+  Responsive width limit
+</div>
+<div className="max-h-screen md:max-h-none overflow-y-auto">
+  Scrollable content on smaller screens
+</div>
+```
+
+Use fractions and breakpoint prefixes directly in JSX class names, without the backslash escapes used in CSS selectors.
 
 ### Layout helpers
 
@@ -56,7 +85,26 @@ Only the classes listed as responsive below have prefixed versions. There is no 
 | --- | --- |
 | `main` | Width 100%; padding `--space-6` by default, `--space-8` at `md`, `--space-10` at `lg`. |
 | `container` | Width 100%, max-width 1440px, centered horizontally; inline padding `--space-4` by default, `--space-8` at `md`, `--space-10` at `lg`, `--space-12` at 1280px. |
+| `section` | Width 100%, max-width 1440px, centered horizontally; padding on all sides `--space-4` by default, `--space-6` at `sm`, `--space-8` at `md`, `--space-10` at `lg`, `--space-12` at 1280px. |
 | `form` element | All `form` elements receive flex column layout, width 100%, and gap `--space-4`. This is an element rule, not a `.form` class. |
+
+### Main and Section components
+
+`Main` and `Section` are exported from `tavix`. They render native `<main>` and `<section>` elements with the `main` and `section` classes respectively. Both accept `children`, an optional `className` (added to the built-in class), and native element props such as `id`, `style`, and ARIA attributes.
+
+```jsx
+import { Main, Section } from "tavix";
+import "tavix/css";
+
+<Main>
+  <Section className="custom-section" aria-labelledby="features-heading">
+    <h2 id="features-heading">Features</h2>
+    <p>Section content</p>
+  </Section>
+</Main>
+```
+
+Section layout styling now targets `.section`, not every `<section>` element. Replace existing sections with `<Section>` or add `className="section"` to retain the centered, responsive layout. Bare `<section>` elements no longer receive this styling.
 
 ### Responsive layout classes
 
@@ -69,11 +117,12 @@ Each of `sm:`, `md:`, and `lg:` is available for **exactly** these layout classe
 - Flex sizing: `flex-0`, `flex-1`, `flex-auto`, `flex-none`, `flex-equal`.
 - Grid columns: `grid-cols-1`, `grid-cols-2`, `grid-cols-3`, `grid-cols-4`, `grid-cols-5`, `grid-cols-6`, `grid-cols-12`.
 - Width/height: `w-auto`, `w-full`, `w-fit`, `w-screen`, `h-auto`, `h-full`, `h-fit`, `h-screen`, and all the `w-<fraction>` and `h-<fraction>` classes listed above.
+- Maximum width/height: all the `max-w-*` and `max-h-*` keyword and fraction classes listed above.
 - Visibility: `visible`, `invisible`.
 
 For example, `sm:grid-cols-2`, `md:w-1/2`, and `lg:hidden` exist; `sm:overflow-auto` and `lg:w-max` do not.
 
-## Utilities (`utilities.css`)
+## Utilities
 
 Spacing values use the CSS tokens `--space-0` through `--space-8` (0, 4, 8, 12, 16, 20, 24, and 32px). In the tables below, `N` means one of **`0`, `1`, `2`, `3`, `4`, `5`, `6`, `8`**; for example, `mt-N` represents `mt-0`, `mt-1`, ..., `mt-8` (not `mt-7`). `x` and `y` use logical inline/block axes; directional `l`, `r`, `t`, `b` use physical sides.
 
@@ -85,7 +134,7 @@ Spacing values use the CSS tokens `--space-0` through `--space-8` (0, 4, 8, 12, 
 | `pt-N`, `pr-N`, `pb-N`, `pl-N` | `padding-top`, `padding-right`, `padding-bottom`, `padding-left` |
 | `px-N`, `py-N` | `padding-inline`, `padding-block` |
 
-There are no responsive padding variants in this stylesheet.
+There are no responsive padding variants.
 
 ### Margin
 
@@ -95,8 +144,9 @@ There are no responsive padding variants in this stylesheet.
 | `mt-N`, `mr-N`, `mb-N`, `ml-N` | `margin-top`, `margin-right`, `margin-bottom`, `margin-left` |
 | `mt-auto`, `mr-auto`, `mb-auto`, `ml-auto` | Auto margin on the named physical side. |
 | `mx-N`, `my-N` | `margin-inline`, `margin-block` |
+| `mx-auto`, `my-auto` | `margin-inline: auto`, `margin-block: auto` |
 
-At each of `sm:`, `md:`, and `lg:`, **only** `m-auto`, `mt-auto`, `mr-auto`, `mb-auto`, and `ml-auto` have responsive variants (such as `sm:m-auto` and `lg:mr-auto`). Numeric margins and `mx-N`/`my-N` do not.
+All margin classes in this table support `sm:`, `md:`, and `lg:` prefixes, including auto margins and every numbered value of `N` (`0`, `1`, `2`, `3`, `4`, `5`, `6`, `8`). For example, `sm:mx-auto`, `md:mt-4`, and `lg:my-2` work.
 
 ### Spacing between children
 
@@ -141,7 +191,7 @@ The `space-*` classes have no responsive variants and use physical left/top marg
 
 Only `cursor-pointer`, `cursor-default`, and `cursor-not-allowed` have `sm:`, `md:`, and `lg:` variants.
 
-## Typography (`typography.css`)
+## Typography
 
 Font tokens are set on `:root` and consumed by the classes below. The default `body` font is `--ff-base` (Inter) at `--fw-regular`; there is no `.font-base` class for this — it's applied globally to the `body` element.
 
