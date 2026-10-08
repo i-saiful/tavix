@@ -209,10 +209,30 @@ Each of these classes sets `font-size`, `font-weight`, and `line-height` togethe
 
 ### Font family and weight
 
-| Classes | Effect |
-| --- | --- |
-| `ff-merienda` | Switches `font-family` to `--ff-merienda` (Merienda). There is no class for the base Inter family since it's the default. |
-| `fw-bold` | Sets `font-weight: var(--fw-bold)` (700). There are no `fw-regular`, `fw-medium`, or `fw-semibold` classes; those weights are only available bundled inside the type-scale classes above. |
+#### Font family utilities
+
+| Classes | Font family | Notes |
+| --- | --- | --- |
+| `ff-inter` | `"Inter", sans-serif` | Default system font. |
+| `ff-merienda` | `"Merienda", cursive` | Playful, creative font. |
+| `ff-system` | System UI font stack | Native OS interface font (e.g., SF Pro Display, Segoe UI). |
+| `ff-sans` | `Arial, Helvetica, sans-serif` | Universal sans-serif fallback. |
+| `ff-serif` | `Georgia, "Times New Roman", serif` | Classic serif font. |
+| `ff-mono` | System monospace stack | Native UI monospace (e.g., SF Mono, Consolas, Menlo). |
+| `ff-monospace` | Browser generic `monospace` | Generic monospace fallback. |
+| `ff-cursive` | Browser generic `cursive` | Generic cursive style. |
+| `ff-fantasy` | Browser generic `fantasy` | Generic fantasy style. |
+
+#### Font weight utilities
+
+| Classes | Weight | Value |
+| --- | --- | --- |
+| `fw-regular` | Regular | 400 |
+| `fw-medium` | Medium | 500 |
+| `fw-semibold` | Semibold | 600 |
+| `fw-bold` | Bold | 700 |
+
+All four font weights are now available as utilities and can be combined with other classes:
 
 ### Text alignment
 
