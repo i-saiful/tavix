@@ -238,6 +238,18 @@ All four font weights are now available as utilities and can be combined with ot
 
 `text-left`, `text-center`, `text-right`, and `text-justify` set `text-align`. All four have `sm:`, `md:`, and `lg:` variants.
 
+### Whitespace and text overflow
+
+Use `.ellipsis` together with the `line-*` utilities to clamp multi-line text. `.ellipsis` enables overflow clipping and vertical line clamping, while `line-1` through `line-5` set the `--ellipsis-lines` value used by that rule. Responsive `sm:`, `md:`, and `lg:` variants are available for each `line-*` utility.
+
+| Classes | Effect |
+| --- | --- |
+| `ellipsis` | Applies multiline overflow clipping with `white-space: pre-wrap`, `display: -webkit-box`, `overflow: hidden`, vertical box orientation, and line clamping. |
+| `line-1`, `line-2`, `line-3`, `line-4`, `line-5` | Sets `--ellipsis-lines` to 1 through 5. |
+| `whitespace-normal`, `whitespace-nowrap`, `whitespace-pre`, `whitespace-pre-line`, `whitespace-pre-wrap`, `whitespace-break-spaces` | Sets the corresponding CSS `white-space` value. |
+
+All `whitespace-*` utilities and all `line-*` utilities have `sm:`, `md:`, and `lg:` variants.
+
 ### Font size (standalone)
 
 These set only `font-size`, reusing the same size tokens as the type scale above, and can be combined with any `font-weight`/`line-height` you choose:
