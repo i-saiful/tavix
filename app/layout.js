@@ -1,7 +1,7 @@
 import "tavix/css";
 import "./globals.css";
-import { TavixProvider } from "tavix/provider";
 import { Sidebar } from "@/components";
+import { TavixProvider } from "tavix/provider";
 
 export const metadata = {
   title: {
