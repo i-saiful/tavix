@@ -29,6 +29,30 @@
       ]
     },
     {
+      "id": "theme",
+      "title": "Theme",
+      "icon": "folder",
+      "type": "link",
+      "children": [
+        {
+          "id": "react-theme",
+          "title": "React",
+          "icon": "file",
+          "type": "link",
+          "url": "/theme/react",
+          "file": "react-theme.md"
+        },
+        {
+          "id": "nextjs-theme",
+          "title": "Next.js",
+          "icon": "file",
+          "type": "link",
+          "url": "/theme/nextjs",
+          "file": "nextjs-theme.md"
+        }
+      ]
+    },
+    {
       "id": "button",
       "title": "Button",
       "icon": "file",
