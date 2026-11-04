@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { Markdown } from "tavix";
 import sidebar from "@/content/data/sidebar.json";
 import { readDoc } from "@/utils/read-doc";
+import { Loading } from "@/components";
 
 const pages = sidebar.menu.filter((item) => !item.children);
 
@@ -22,7 +24,7 @@ export async function generateMetadata({ params }) {
   return page ? { title: page.title } : {};
 }
 
-export default async function SectionPage({ params }) {
+async function SectionContent({ params }) {
   const { section } = await params;
   const page = getPage(section);
 
@@ -36,5 +38,13 @@ export default async function SectionPage({ params }) {
     <article className="docs-content">
       <Markdown content={content} />
     </article>
+  );
+}
+
+export default function SectionPage({ params }) {
+  return (
+    <Suspense fallback={<Loading />}>
+      <SectionContent params={params} />
+    </Suspense>
   );
 }

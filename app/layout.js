@@ -1,7 +1,6 @@
 import "tavix/css";
 import "./globals.css";
 import { Sidebar } from "@/components";
-import { TavixProvider } from "tavix/provider";
 
 export const metadata = {
   title: {
@@ -48,10 +47,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <main className="flex bg-surface h-screen overflow-hidden">
-          <TavixProvider>
-            <Sidebar />
-            <div className="flex-1 overflow-y-auto">{children}</div>
-          </TavixProvider>
+          <Sidebar />
+          <div className="flex-1 overflow-y-auto">{children}</div>
         </main>
       </body>
     </html>

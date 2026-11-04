@@ -23,15 +23,14 @@ npm i tavix
 Import Tavix's CSS and wrap your application with `TavixProvider` in `app/layout.jsx`.
 
 ```js
-import "tavix/css";
++import "tavix/css";
 import "./globals.css";
-import { TavixProvider } from "tavix/provider";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <TavixProvider>{children}</TavixProvider>
+        {children}
       </body>
     </html>
   );

@@ -13,7 +13,7 @@
     "next": "16.4.4",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "tavix": "^1.2.1"
+    "tavix": "^1.2.3"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.2",

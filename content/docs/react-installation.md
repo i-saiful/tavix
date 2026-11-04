@@ -27,7 +27,7 @@ Import Tavix's CSS in `main.jsx` and wrap your application with `TavixProvider`.
 ```jsx
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import "tavix/css";
++import "tavix/css";
 import './index.css'
 import App from './App.jsx'
 
@@ -43,16 +43,13 @@ createRoot(document.getElementById('root')).render(
 Render a Tavix component inside the provider to confirm that the setup is working.
 
 ```jsx
-import { TavixProvider } from "tavix/provider";
-import { Button } from "tavix";
++import { Button } from "tavix";
 
 function App() {
   return (
-    <TavixProvider>
-      <main className="flex justify-center items-center h-screen">
-        <Button className="btn btn-primary">Click Me</Button>
-      </main>
-    </TavixProvider>
+    <main className="flex justify-center items-center h-screen">
++      <Button className="btn btn-primary">Click Me</Button>
+    </main>
   );
 }
 
@@ -124,12 +121,11 @@ Wrap the application with `BrowserRouter` for navigation and `TavixProvider` for
 
 ```jsx
 import { BrowserRouter } from "react-router";
-import { TavixProvider } from "tavix/provider";
 
 export default function Providers({ children }) {
   return (
     <BrowserRouter>
-      <TavixProvider>{children}</TavixProvider>
+      {children}
     </BrowserRouter>
   );
 }

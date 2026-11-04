@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { Markdown } from "tavix";
 import sidebar from "@/content/data/sidebar.json";
 import { readDoc } from "@/utils/read-doc";
+import { Loading } from "@/components";
 
 const pages = sidebar.menu
   .flatMap((item) => item.children ?? [])
@@ -11,9 +13,7 @@ const pages = sidebar.menu
   }));
 
 function getPage(section, slug) {
-  return pages.find(
-    (page) => page.section === section && page.url === `/${section}/${slug}`,
-  );
+  return pages.find((page) => page.section === section && page.url === `/${section}/${slug}`);
 }
 
 export function generateStaticParams() {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
   return page ? { title: page.title } : {};
 }
 
-export default async function DocsPage({ params }) {
+async function DocsContent({ params }) {
   const { section, slug } = await params;
   const page = getPage(section, slug);
 
@@ -44,5 +44,13 @@ export default async function DocsPage({ params }) {
     <article className="docs-content">
       <Markdown content={content} />
     </article>
+  );
+}
+
+export default function DocsPage({ params }) {
+  return (
+    <Suspense fallback={<Loading />}>
+      <DocsContent params={params} />
+    </Suspense>
   );
 }
