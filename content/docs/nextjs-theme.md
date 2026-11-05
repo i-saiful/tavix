@@ -37,7 +37,7 @@ return <ThemeToggle initialTheme={initialTheme} />;
 
 `saveTheme` is a Server Action. The client component calls it after a click, and Next.js runs that action on the server to save the cookie. Calling a Server Action does not turn the client component into a Server Component.
 
-## Theme Files
+## Theme Files ( `Dynamic` - server-rendered on demand)
 
 ### `utils/theme.js`
 
@@ -166,3 +166,5 @@ export default function ThemeToggle({ initialTheme }) {
 ```
 
 On click, this component updates its state and the page immediately, then asks the server action to persist the choice in a cookie.
+
+## Theme Files ( prerendered as `static HTML` - uses generateStaticParams)
