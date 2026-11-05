@@ -1,9 +1,11 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useSyncExternalStore, useState } from "react";
 import { Sidebar } from "tavix";
+import { useMount } from "tavix/hooks";
 import Link from "next/link";
 import sidebar from "@/content/data/sidebar.json";
+import { initTheme, saveTheme, THEMES } from "@/utils/persistence.js";
 
 const STORAGE_KEY = "sidebar";
 
@@ -47,7 +49,18 @@ function updateSelection(selection) {
 }
 
 export default function AppSidebar() {
+  const [theme, setTheme] = useState();
   const saved = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  useMount(() => {
+    setTheme(initTheme());
+  });
+
+  function toggleTheme() {
+    const nextTheme = theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
+    setTheme(nextTheme);
+    saveTheme(nextTheme);
+  }
 
   let selection = DEFAULT_SELECTION;
 
@@ -69,6 +82,9 @@ export default function AppSidebar() {
       activeId={selection.activeId}
       expandedId={selection.expandedId}
       onSelectionChange={updateSelection}
+      onThemeToggle={toggleTheme}
+      enableTheme={true}
+      isDarkMode={theme === THEMES.DARK}
     />
   );
 }

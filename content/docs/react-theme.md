@@ -25,7 +25,9 @@ src/
 ### persistence.js
 
 ```js
-export function getLocalStorage(key) {
+export const THEME_KEY = "theme";
+
+function getLocalStorage(key) {
   try {
     return window.localStorage.getItem(key);
   } catch {
@@ -33,7 +35,7 @@ export function getLocalStorage(key) {
   }
 }
 
-export function setLocalStorage(key, value) {
+function setLocalStorage(key, value) {
   try {
     window.localStorage.setItem(key, value);
     return true;
@@ -42,17 +44,19 @@ export function setLocalStorage(key, value) {
   }
 }
 
-export const THEME_KEY = "theme";
 export const THEMES = Object.freeze({
   DARK: "dark",
   LIGHT: "light",
 });
 
-export function getTheme() {
-  return getLocalStorage(THEME_KEY) === THEMES.DARK ? THEMES.DARK : THEMES.LIGHT;
+export function initTheme() {
+  const theme = getLocalStorage(THEME_KEY) === THEMES.DARK ? THEMES.DARK : THEMES.LIGHT;
+  document.documentElement.dataset.theme = theme;
+  return theme;
 }
 
 export function saveTheme(theme) {
+  document.documentElement.dataset.theme = theme;
   return setLocalStorage(THEME_KEY, theme);
 }
 ```
@@ -61,10 +65,10 @@ export function saveTheme(theme) {
 ```jsx
 import { useState } from "react";
 import { Button } from "tavix";
-+import { getTheme, saveTheme, THEMES } from "./utils/persistence.js";
++import { initTheme, saveTheme, THEMES } from "./utils/persistence.js";
 
 function App() {
-+  const [theme, setTheme] = useState(getTheme);
++  const [theme, setTheme] = useState(initTheme());
 
 +  function toggleTheme() {
 +    const nextTheme = theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
@@ -73,7 +77,7 @@ function App() {
 +  }
 
   return (
-+    <main className="flex justify-center items-center h-screen flex-col gap-5 bg-canvas" data-theme={theme}>
+    <main className="flex justify-center items-center h-screen flex-col gap-5 bg-canvas">
       <h1 className="h1 text-primary">
         Currently Theme is
         <span className="font-monospace bg-surface px-3 rounded ml-4 letter-spacing-widest">
