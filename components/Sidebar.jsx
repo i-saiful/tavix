@@ -1,59 +1,19 @@
 "use client";
 
-import { useSyncExternalStore, useState } from "react";
 import { Sidebar } from "tavix";
 import { useMount } from "tavix/hooks";
 import Link from "next/link";
 import sidebar from "@/content/data/sidebar.json";
-import { initTheme, saveTheme, THEMES } from "@/utils/persistence.js";
-
-const STORAGE_KEY = "sidebar";
-
-const DEFAULT_SELECTION = {
-  activeId: null,
-  expandedId: null,
-};
-
-const listeners = new Set();
-
-function getSnapshot() {
-  try {
-    return localStorage.getItem(STORAGE_KEY);
-  } catch {
-    return null;
-  }
-}
-
-function getServerSnapshot() {
-  return null;
-}
-
-function subscribe(callback) {
-  listeners.add(callback);
-  window.addEventListener("storage", callback);
-
-  return () => {
-    listeners.delete(callback);
-    window.removeEventListener("storage", callback);
-  };
-}
-
-function updateSelection(selection) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(selection));
-  } catch {
-    // Ignore unavailable storage
-  }
-
-  listeners.forEach((callback) => callback());
-}
+import { initTheme, saveTheme, THEMES, initSidebar, saveSidebar } from "@/utils/persistence.js";
+import { useState } from "react";
 
 export default function AppSidebar() {
   const [theme, setTheme] = useState();
-  const saved = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const [selection, setSelection] = useState({ activeId: null, expandedId: null });
 
   useMount(() => {
     setTheme(initTheme());
+    setSelection(initSidebar());
   });
 
   function toggleTheme() {
@@ -62,17 +22,9 @@ export default function AppSidebar() {
     saveTheme(nextTheme);
   }
 
-  let selection = DEFAULT_SELECTION;
-
-  try {
-    if (saved) {
-      selection = {
-        ...DEFAULT_SELECTION,
-        ...JSON.parse(saved),
-      };
-    }
-  } catch {
-    // Use default selection
+  function handleSelectionChange(nextSelection) {
+    setSelection(nextSelection);
+    saveSidebar(nextSelection);
   }
 
   return (
@@ -81,7 +33,7 @@ export default function AppSidebar() {
       Link={Link}
       activeId={selection.activeId}
       expandedId={selection.expandedId}
-      onSelectionChange={updateSelection}
+      onSelectionChange={handleSelectionChange}
       onThemeToggle={toggleTheme}
       enableTheme={true}
       isDarkMode={theme === THEMES.DARK}

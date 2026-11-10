@@ -1,4 +1,5 @@
 const THEME_KEY = "theme";
+const SIDEBAR_KEY = "sidebar";
 
 function getLocalStorage(key) {
   try {
@@ -28,4 +29,25 @@ export function initTheme() {
 export function saveTheme(theme) {
   document.documentElement.dataset.theme = theme;
   setLocalStorage(THEME_KEY, theme);
+}
+
+export function initSidebar() {
+  const savedSelection = getLocalStorage(SIDEBAR_KEY);
+  if (!savedSelection) {
+    return { activeId: null, expandedId: null };
+  }
+
+  try {
+    const selection = JSON.parse(savedSelection);
+    return {
+      activeId: typeof selection?.activeId === "string" ? selection.activeId : null,
+      expandedId: typeof selection?.expandedId === "string" ? selection.expandedId : null,
+    };
+  } catch {
+    return { activeId: null, expandedId: null };
+  }
+}
+
+export function saveSidebar(selection) {
+  return setLocalStorage(SIDEBAR_KEY, JSON.stringify(selection));
 }

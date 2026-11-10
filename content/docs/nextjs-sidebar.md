@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
 import { useState } from "react";
 import Link from "next/link";
 import { Sidebar } from "tavix";
-import { initSidebarSelection, saveSidebarSelection } from "@/utils/persistence";
+import { initSidebar, saveSidebar } from "@/utils/persistence";
 import { useMount } from "tavix/hooks";
 
 const items = {
@@ -91,12 +91,12 @@ export default function AppSidebar() {
   const [selection, setSelection] = useState({ activeId: null, expandedId: null });
 
   useMount(() => {
-    setSelection(initSidebarSelection());
+    setSelection(initSidebar());
   });
 
   function handleSelectionChange(nextSelection) {
     setSelection(nextSelection);
-    saveSidebarSelection(nextSelection);
+    saveSidebar(nextSelection);
   }
 
   return (
@@ -121,10 +121,10 @@ export default function AppSidebar() {
 ## `persistence.js`
 
 ```jsx
-const SIDEBAR_SELECTION_KEY = "sidebar";
+const SIDEBAR_KEY = "sidebar";
 
-export function initSidebarSelection() {
-  const savedSelection = getLocalStorage(SIDEBAR_SELECTION_KEY);
+export function initSidebar() {
+  const savedSelection = getLocalStorage(SIDEBAR_KEY);
   if (!savedSelection) {
     return { activeId: null, expandedId: null };
   }
@@ -140,8 +140,8 @@ export function initSidebarSelection() {
   }
 }
 
-export function saveSidebarSelection(selection) {
-  return setLocalStorage(SIDEBAR_SELECTION_KEY, JSON.stringify(selection));
+export function saveSidebar(selection) {
+  return setLocalStorage(SIDEBAR_KEY, JSON.stringify(selection));
 }
 ```
 
