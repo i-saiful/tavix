@@ -53,6 +53,30 @@
       ]
     },
     {
+      "id": "sidebar",
+      "title": "Sidebar",
+      "icon": "folder",
+      "type": "link",
+      "children": [
+        {
+          "id": "react-sidebar",
+          "title": "React",
+          "icon": "file",
+          "type": "link",
+          "url": "/sidebar/react",
+          "file": "react-sidebar.md"
+        },
+        {
+          "id": "nextjs-sidebar",
+          "title": "Next.js",
+          "icon": "file",
+          "type": "link",
+          "url": "/sidebar/nextjs",
+          "file": "nextjs-sidebar.md"
+        }
+      ]
+    },
+    {
       "id": "button",
       "title": "Button",
       "icon": "file",
@@ -275,14 +299,6 @@
       "type": "link",
       "url": "/progress",
       "file": "progress.md"
-    },
-    {
-      "id": "sidebar",
-      "title": "Sidebar",
-      "icon": "file",
-      "type": "link",
-      "url": "/sidebar",
-      "file": "sidebar.md"
     },
     {
       "id": "skeleton",
