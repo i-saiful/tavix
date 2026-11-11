@@ -99,7 +99,8 @@
       "icon": "file",
       "type": "link",
       "url": "/input",
-      "file": "input.md"
+      "file": "input.md",
+      "component": "Input"
     },
     {
       "id": "autocomplete",
@@ -107,7 +108,8 @@
       "icon": "file",
       "type": "link",
       "url": "/autocomplete",
-      "file": "autocomplete.md"
+      "file": "autocomplete.md",
+      "component": "Autocomplete"
     },
     {
       "id": "accordion",
@@ -115,7 +117,8 @@
       "icon": "file",
       "type": "link",
       "url": "/accordion",
-      "file": "accordion.md"
+      "file": "accordion.md",
+      "component": "Accordion"
     },
     {
       "id": "alert",
@@ -123,7 +126,8 @@
       "icon": "file",
       "type": "link",
       "url": "/alert",
-      "file": "alert.md"
+      "file": "alert.md",
+      "component": "Alert"
     },
     {
       "id": "alert-dialog",
@@ -131,7 +135,8 @@
       "icon": "file",
       "type": "link",
       "url": "/alert-dialog",
-      "file": "alert-dialog.md"
+      "file": "alert-dialog.md",
+      "component": "AlertDialog"
     },
     {
       "id": "badge",
@@ -139,7 +144,8 @@
       "icon": "file",
       "type": "link",
       "url": "/badge",
-      "file": "badge.md"
+      "file": "badge.md",
+      "component": "Badge"
     },
     {
       "id": "breadcrumb",
@@ -147,7 +153,8 @@
       "icon": "file",
       "type": "link",
       "url": "/breadcrumb",
-      "file": "breadcrumb.md"
+      "file": "breadcrumb.md",
+      "component": "Breadcrumb"
     },
     {
       "id": "code-block",
@@ -155,7 +162,8 @@
       "icon": "file",
       "type": "link",
       "url": "/code-block",
-      "file": "code-block.md"
+      "file": "code-block.md",
+      "component": "CodeBlock"
     },
     {
       "id": "command-palette",
@@ -163,7 +171,8 @@
       "icon": "file",
       "type": "link",
       "url": "/command-palette",
-      "file": "command-palette.md"
+      "file": "command-palette.md",
+      "component": "CommandPalette"
     },
     {
       "id": "confirmation-dialog",
@@ -171,7 +180,8 @@
       "icon": "file",
       "type": "link",
       "url": "/confirmation-dialog",
-      "file": "confirmation-dialog.md"
+      "file": "confirmation-dialog.md",
+      "component": "ConfirmationDialog"
     },
     {
       "id": "context-menu",
@@ -179,7 +189,8 @@
       "icon": "file",
       "type": "link",
       "url": "/context-menu",
-      "file": "context-menu.md"
+      "file": "context-menu.md",
+      "component": "ContextMenu"
     },
     {
       "id": "dialog",
@@ -187,7 +198,8 @@
       "icon": "file",
       "type": "link",
       "url": "/dialog",
-      "file": "dialog.md"
+      "file": "dialog.md",
+      "component": "Dialog"
     },
     {
       "id": "modal",
@@ -195,7 +207,8 @@
       "icon": "file",
       "type": "link",
       "url": "/modal",
-      "file": "modal.md"
+      "file": "modal.md",
+      "component": "Modal"
     },
     {
       "id": "drawer",
@@ -203,7 +216,8 @@
       "icon": "file",
       "type": "link",
       "url": "/drawer",
-      "file": "drawer.md"
+      "file": "drawer.md",
+      "component": "Drawer"
     },
     {
       "id": "dropdown",
@@ -211,7 +225,8 @@
       "icon": "file",
       "type": "link",
       "url": "/dropdown",
-      "file": "dropdown.md"
+      "file": "dropdown.md",
+      "component": "Dropdown"
     },
     {
       "id": "file-preview",
@@ -219,7 +234,8 @@
       "icon": "file",
       "type": "link",
       "url": "/file-preview",
-      "file": "file-preview.md"
+      "file": "file-preview.md",
+      "component": "FilePreview"
     },
     {
       "id": "image-gallery",
@@ -227,7 +243,8 @@
       "icon": "file",
       "type": "link",
       "url": "/image-gallery",
-      "file": "image-gallery.md"
+      "file": "image-gallery.md",
+      "component": "ImageGallery"
     },
     {
       "id": "image-preview",
@@ -235,7 +252,8 @@
       "icon": "file",
       "type": "link",
       "url": "/image-preview",
-      "file": "image-preview.md"
+      "file": "image-preview.md",
+      "component": "ImagePreview"
     },
     {
       "id": "markdown",
@@ -243,7 +261,8 @@
       "icon": "file",
       "type": "link",
       "url": "/markdown",
-      "file": "markdown.md"
+      "file": "markdown.md",
+      "component": "Markdown"
     },
     {
       "id": "card",
@@ -251,7 +270,8 @@
       "icon": "file",
       "type": "link",
       "url": "/card",
-      "file": "card.md"
+      "file": "card.md",
+      "component": "Card"
     },
     {
       "id": "grid",
@@ -259,7 +279,8 @@
       "icon": "file",
       "type": "link",
       "url": "/grid",
-      "file": "grid.md"
+      "file": "grid.md",
+      "component": "Grid"
     },
     {
       "id": "main",
@@ -267,7 +288,8 @@
       "icon": "file",
       "type": "link",
       "url": "/main",
-      "file": "main.md"
+      "file": "main.md",
+      "component": "Main"
     },
     {
       "id": "navbar",
@@ -275,7 +297,8 @@
       "icon": "file",
       "type": "link",
       "url": "/navbar",
-      "file": "navbar.md"
+      "file": "navbar.md",
+      "component": "Navbar"
     },
     {
       "id": "pagination",
@@ -283,7 +306,8 @@
       "icon": "file",
       "type": "link",
       "url": "/pagination",
-      "file": "pagination.md"
+      "file": "pagination.md",
+      "component": "Pagination"
     },
     {
       "id": "popover",
@@ -291,7 +315,8 @@
       "icon": "file",
       "type": "link",
       "url": "/popover",
-      "file": "popover.md"
+      "file": "popover.md",
+      "component": "Popover"
     },
     {
       "id": "progress",
@@ -299,7 +324,8 @@
       "icon": "file",
       "type": "link",
       "url": "/progress",
-      "file": "progress.md"
+      "file": "progress.md",
+      "component": "Progress"
     },
     {
       "id": "skeleton",
@@ -307,7 +333,8 @@
       "icon": "file",
       "type": "link",
       "url": "/skeleton",
-      "file": "skeleton.md"
+      "file": "skeleton.md",
+      "component": "Skeleton"
     },
     {
       "id": "spinner",
@@ -315,7 +342,8 @@
       "icon": "file",
       "type": "link",
       "url": "/spinner",
-      "file": "spinner.md"
+      "file": "spinner.md",
+      "component": "Spinner"
     },
     {
       "id": "stepper",
@@ -323,7 +351,8 @@
       "icon": "file",
       "type": "link",
       "url": "/stepper",
-      "file": "stepper.md"
+      "file": "stepper.md",
+      "component": "Stepper"
     },
     {
       "id": "tabs",
@@ -331,7 +360,8 @@
       "icon": "file",
       "type": "link",
       "url": "/tabs",
-      "file": "tabs.md"
+      "file": "tabs.md",
+      "component": "Tabs"
     },
     {
       "id": "video-player",
@@ -339,7 +369,8 @@
       "icon": "file",
       "type": "link",
       "url": "/video-player",
-      "file": "video-player.md"
+      "file": "video-player.md",
+      "component": "Video"
     },
     {
       "id": "video",
@@ -347,7 +378,8 @@
       "icon": "file",
       "type": "link",
       "url": "/video",
-      "file": "video.md"
+      "file": "video.md",
+      "component": "Video"
     },
     {
       "id": "tooltip",
@@ -355,7 +387,8 @@
       "icon": "file",
       "type": "link",
       "url": "/tooltip",
-      "file": "tooltip.md"
+      "file": "tooltip.md",
+      "component": "Tooltip"
     },
     {
       "id": "avatar",
@@ -363,7 +396,8 @@
       "icon": "file",
       "type": "link",
       "url": "/avatar",
-      "file": "avatar.md"
+      "file": "avatar.md",
+      "component": "Avatar"
     },
     {
       "id": "carousel",
@@ -371,7 +405,8 @@
       "icon": "file",
       "type": "link",
       "url": "/carousel",
-      "file": "carousel.md"
+      "file": "carousel.md",
+      "component": "Carousel"
     },
     {
       "id": "copy-button",
@@ -379,7 +414,8 @@
       "icon": "file",
       "type": "link",
       "url": "/copy-button",
-      "file": "copy-button.md"
+      "file": "copy-button.md",
+      "component": "CopyButton"
     },
     {
       "id": "selectable-table",
@@ -387,7 +423,8 @@
       "icon": "file",
       "type": "link",
       "url": "/selectable-table",
-      "file": "selectable-table.md"
+      "file": "selectable-table.md",
+      "component": "SelectableTable"
     },
     {
       "id": "table",
@@ -395,7 +432,8 @@
       "icon": "file",
       "type": "link",
       "url": "/table",
-      "file": "table.md"
+      "file": "table.md",
+      "component": "Table"
     },
     {
       "id": "timeline",
@@ -403,7 +441,8 @@
       "icon": "file",
       "type": "link",
       "url": "/timeline",
-      "file": "timeline.md"
+      "file": "timeline.md",
+      "component": "Timeline"
     },
     {
       "id": "tree-view",
@@ -411,7 +450,8 @@
       "icon": "file",
       "type": "link",
       "url": "/tree-view",
-      "file": "tree-view.md"
+      "file": "tree-view.md",
+      "component": "TreeView"
     },
     {
       "id": "stat",
@@ -419,7 +459,8 @@
       "icon": "file",
       "type": "link",
       "url": "/stat",
-      "file": "stat.md"
+      "file": "stat.md",
+      "component": "Stat"
     },
     {
       "id": "calendar",
@@ -427,7 +468,8 @@
       "icon": "file",
       "type": "link",
       "url": "/calendar",
-      "file": "calendar.md"
+      "file": "calendar.md",
+      "component": "Calendar"
     },
     {
       "id": "checkbox",
@@ -435,7 +477,8 @@
       "icon": "file",
       "type": "link",
       "url": "/checkbox",
-      "file": "checkbox.md"
+      "file": "checkbox.md",
+      "component": "Checkbox"
     },
     {
       "id": "date-picker",
@@ -443,7 +486,8 @@
       "icon": "file",
       "type": "link",
       "url": "/date-picker",
-      "file": "date-picker.md"
+      "file": "date-picker.md",
+      "component": "DatePicker"
     },
     {
       "id": "file-upload",
@@ -451,7 +495,8 @@
       "icon": "file",
       "type": "link",
       "url": "/file-upload",
-      "file": "file-upload.md"
+      "file": "file-upload.md",
+      "component": "FileUpload"
     },
     {
       "id": "otp-input",
@@ -459,7 +504,8 @@
       "icon": "file",
       "type": "link",
       "url": "/otp-input",
-      "file": "otp-input.md"
+      "file": "otp-input.md",
+      "component": "OtpInput"
     },
     {
       "id": "radio",
@@ -467,7 +513,8 @@
       "icon": "file",
       "type": "link",
       "url": "/radio",
-      "file": "radio.md"
+      "file": "radio.md",
+      "component": "Radio"
     },
     {
       "id": "select",
@@ -475,7 +522,8 @@
       "icon": "file",
       "type": "link",
       "url": "/select",
-      "file": "select.md"
+      "file": "select.md",
+      "component": "Select"
     },
     {
       "id": "slider",
@@ -483,7 +531,8 @@
       "icon": "file",
       "type": "link",
       "url": "/slider",
-      "file": "slider.md"
+      "file": "slider.md",
+      "component": "Slider"
     },
     {
       "id": "textarea",
@@ -491,7 +540,8 @@
       "icon": "file",
       "type": "link",
       "url": "/textarea",
-      "file": "textarea.md"
+      "file": "textarea.md",
+      "component": "Textarea"
     },
     {
       "id": "time-picker",
@@ -499,7 +549,8 @@
       "icon": "file",
       "type": "link",
       "url": "/time-picker",
-      "file": "time-picker.md"
+      "file": "time-picker.md",
+      "component": "TimePicker"
     },
     {
       "id": "hooks",
