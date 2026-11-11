@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { Markdown } from "tavix";
 import sidebar from "@/content/data/sidebar.json";
 import { readDoc } from "@/utils/read-doc";
-import { Loading } from "@/components";
+import { ExampleTabs, Loading } from "@/components";
 
 const pages = sidebar.menu.filter((item) => !item.children);
 
@@ -36,6 +36,7 @@ async function SectionContent({ params }) {
 
   return (
     <article className="docs-content">
+      {page.component ? <ExampleTabs componentName={page.component} /> : null}
       <Markdown content={content} />
     </article>
   );

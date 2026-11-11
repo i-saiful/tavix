@@ -82,7 +82,8 @@
       "icon": "file",
       "type": "link",
       "url": "/button",
-      "file": "button.md"
+      "file": "button.md",
+      "component": "Button"
     },
     {
       "id": "css-utils",
