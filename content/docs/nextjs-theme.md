@@ -2,17 +2,18 @@
 
 ## Folder Structure
 
-```bash
-actions/
-	theme-actions.js       Saves the selected theme in a cookie
-app/
-	layout.js              Reads the saved theme for the HTML document
-	page.js                Reads the theme and passes it to the toggle
-	globals.css            Global styles (currently empty)
-components/
-	ThemeToggle.jsx        Interactive client component
-utils/
-	theme.js               Shared theme names and validation
+```folder
+project
+|-- actions/
+    +-- theme-actions.js
+|-- app/
+    |-- layout.js
+    |-- page.js
+    +-- globals.css
+|-- components/
+    +-- ThemeToggle.jsx
+|-- utils/
+    +-- theme.js
 ```
 
 ## Server And Client
@@ -171,16 +172,17 @@ On click, this component updates its state and the page immediately, then asks t
 
 ### Folder Structure
 
-```bash
-app/
-	layout.js              Reads the saved theme for the HTML document
-	page.js                Reads the theme and passes it to the toggle
-	globals.css            Global styles (currently empty)
-public/
-	theme-init.js        
-utils/
-	persistence.js       
-next.config.mjs  
+```folder
+project
+|-- app
+    |-- layout.js
+    |-- page.js
+    |-- globals.css
+|-- public/
+    |-- theme-init.js        
+|-- utils/
+    |-- persistence.js       
++-- next.config.mjs  
 ```
 
 ### next.config.mjs

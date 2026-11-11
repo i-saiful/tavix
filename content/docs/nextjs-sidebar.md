@@ -4,14 +4,14 @@ Use the `Sidebar` component to build a navigation rail or side menu with grouped
 
 ## Source Structure
 
-```sh
-root/
-`-- app/
-	`-- layout.jsx
-`-- components/
-	`-- Sidebar.jsx
-`-- utils/
-	`-- persistence.js
+```folder
+project/
+|-- app/
+    +-- layout.jsx
+|-- components/
+    +-- Sidebar.jsx
+|-- utils/
+    +-- persistence.js
 ```
 
 ## `layout.jsx`
@@ -149,15 +149,15 @@ export function saveSidebar(selection) {
 
 ## Source Structure
 
-```sh
-root/
-`-- app/
-	`-- layout.jsx
-  `-- sidebar-actions.jsx
-`-- components/
-	`-- Sidebar.jsx
-`-- utils/
-	`-- sidebar.js
+```folder
+project/
+|-- app/
+    +-- layout.jsx
+    +-- sidebar-actions.jsx
+|-- components/
+    +-- Sidebar.jsx
+|-- utils/
+    +-- sidebar.js
 ```
 
 ## `layout.jsx`

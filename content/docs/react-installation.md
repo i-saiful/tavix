@@ -68,13 +68,13 @@ npm i react-router
 
 This structure separates routing, shared providers, and the application layout.
 
-```text
+```folder
 src/
-├── App.jsx
-├── Layout.jsx
-├── Providers.jsx
-├── Router.jsx
-└── main.jsx
+|-- App.jsx
+|-- Layout.jsx
+|-- Providers.jsx
+|-- Router.jsx
++-- main.jsx
 ```
 
 ### Update App.jsx

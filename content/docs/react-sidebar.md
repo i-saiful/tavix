@@ -4,11 +4,11 @@ Use the Sidebar component to build a navigation rail or side menu with grouped l
 
 ## Source Structure
 
-```sh
+```folder
 src/
 |-- Sidebar.jsx
-`-- utils/
-	`-- persistence.js
+|-- utils/
+    +-- persistence.js
 ```
 
 ## `persistence.js`

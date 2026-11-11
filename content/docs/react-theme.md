@@ -13,13 +13,13 @@ This React app lets you switch between light and dark themes. The selected theme
 
 ### Source Structure
 
-```bash
+```folder
 src/
 |-- App.jsx
 |-- index.css
 |-- main.jsx
-`-- utils/
-	`-- persistence.js
+|-- utils
+    |-- persistence.js
 ```
 
 ### persistence.js
